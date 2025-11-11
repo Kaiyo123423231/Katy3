@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collage</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+  background-image: url('k.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* COLLAGE GRID */
+.collage-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* Floating Images */
+.collage-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid red;
+  border-radius: 6px;
+  animation: floatAnim 6s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+.collage-container img:hover {
+  transform: scale(1.2);
+}
+
+/* Float Animation */
+@keyframes floatAnim {
+  0% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(2deg); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(10px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Page Title */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  text-shadow: 0 0 8px black;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .collage-container img {
+    width: 90px;
+    height: 90px;
+  }
+  h1 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .collage-container img {
+    width: 70px;
+    height: 70px;
+  }
+  h1 {
+    font-size: 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Katy</h1>
+
+<div class="collage-container">
+   <img src="1.jpeg" >
+  <img src="2.jpeg">
+  <img src="3.jpeg" alt="Photo 3">
+  <img src="4.jpeg" alt="Photo 4">
+  <img src="5.jpeg" alt="Photo 5">
+  <img src="6.jpeg" alt="Photo 6">
+<img src="7.jpeg" alt="Photo 1">
+  <img src="8.jpeg" alt="Photo 2">
+  <img src="9.jpeg" alt="Photo 3">
+  <img src="10.jpeg" alt="Photo 4">
+  <img src="11.jpeg" alt="Photo 5">
+  <img src="12.jpeg" alt="Photo 6">
+    <img src="1.jpeg" alt="Photo 1">
+  <img src="2.jpeg" alt="Photo 2">
+  <img src="3.jpeg" alt="Photo 3">
+  <img src="4.jpeg" alt="Photo 4">
+  <img src="5.jpeg" alt="Photo 5">
+  <img src="6.jpeg" alt="Photo 6">
+<img src="7.jpeg" alt="Photo 1">
+  <img src="8.jpeg" alt="Photo 2">
+  <img src="9.jpeg" alt="Photo 3">
+  <img src="10.jpeg" alt="Photo 4">
+  <img src="11.jpeg" alt="Photo 5">
+  <img src="12.jpeg" alt="Photo 6">
+</div>
+
+</body>
+</html>

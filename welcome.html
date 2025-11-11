@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome</title>
+<!-- Pixel font -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('k.jpeg');
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  font-family: 'Press Start 2P', monospace;
+  color: #fafafa;
+}
+
+.welcome-card {
+  background-color: rgba(0,0,0,0.6);
+  padding: 48px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid rgba(255,255,255,0.15);
+  max-width: 700px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 12px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.collage img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease;
+}
+
+.collage img:hover {
+  transform: scale(1.1);
+}
+
+button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #b8323b;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 14px;
+  }
+
+  .collage {
+    grid-template-columns: repeat(2, 120px);
+    gap: 10px;
+  }
+
+  .collage img {
+    width: 120px;
+    height: 120px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 12px;
+  }
+
+  .collage {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .collage img {
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .welcome-card {
+    padding: 24px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="welcome-card">
+  <h2>Welcome, my love</h2>
+  <div class="collage">
+    <img src="image1.jpeg" alt="">
+    <img src="image2.jpeg" alt="">
+    <img src="image3.jpeg" alt="">
+    <img src="image4.jpeg" alt="">
+  </div>
+  <button onclick="location.href='main.html'">Continue</button>
+</div>
+
+</body>
+</html>
